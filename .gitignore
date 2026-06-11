@@ -1,0 +1,24 @@
+# Gradle / Android
+.gradle/
+.kotlin/
+build/
+**/build/
+
+# Android Studio
+.idea/
+*.iml
+
+# Local configuration - never commit this file
+local.properties
+
+# Generated files
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.ap_
+
+# OS files
+.DS_Store
+Thumbs.db

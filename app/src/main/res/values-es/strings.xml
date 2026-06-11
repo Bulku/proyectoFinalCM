@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mis Notas</string>
+    <string name="tab_notes">Notas</string>
+    <string name="tab_calendar">Calendario</string>
+    <string name="tab_ai">IA</string>
+    <string name="tab_settings">Ajustes</string>
+    <string name="add_note">Agregar Nota</string>
+    <string name="edit_note">Editar Nota</string>
+    <string name="note_title">Título</string>
+    <string name="note_content">Contenido</string>
+    <string name="note_title_hint">Título de la nota…</string>
+    <string name="note_content_hint">Escribe algo…</string>
+    <string name="save">Guardar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="delete">Eliminar</string>
+    <string name="clear">Limpiar</string>
+    <string name="today">Hoy</string>
+    <string name="upcoming">Próximos</string>
+    <string name="add_task">Agregar Tarea</string>
+    <string name="edit_task">Editar Tarea</string>
+    <string name="task_title">Título</string>
+    <string name="task_title_hint">Título de la tarea…</string>
+    <string name="task_description">Descripción</string>
+    <string name="task_description_hint">Descripción de la tarea…</string>
+    <string name="priority">Prioridad</string>
+    <string name="priority_low">Baja</string>
+    <string name="priority_medium">Media</string>
+    <string name="priority_high">Alta</string>
+    <string name="due_date">Fecha límite</string>
+    <string name="set_time">Establecer hora</string>
+    <string name="save_task">Guardar Tarea</string>
+    <string name="no_notes">Sin notas aún.\nToca + para agregar una.</string>
+    <string name="no_tasks">Sin tareas para este día.</string>
+    <string name="confirm_delete">¿Eliminar este elemento?</string>
+    <string name="field_required">Este campo es obligatorio</string>
+    <string name="select_date">Seleccionar fecha</string>
+    <string name="select_time">Seleccionar hora</string>
+    <string name="accept">Aceptar</string>
+
+    <string name="ai_assistant_title">Asistente IA de productividad</string>
+    <string name="ai_assistant_description">Consulta al asistente para priorizar tareas, dividir una meta en pasos o organizar el calendario actual.</string>
+    <string name="ai_prompt_label">¿En qué necesitas ayuda?</string>
+    <string name="ai_prompt_hint">Ejemplo: Tengo parcial el viernes y dos trabajos pendientes. ¿Cómo me organizo?</string>
+    <string name="ai_generate">Generar sugerencia</string>
+    <string name="ai_loading">Consultando la IA…</string>
+    <string name="ai_error_title">No se pudo generar la sugerencia</string>
+    <string name="ai_result_title">Sugerencia de IA</string>
+    <string name="ai_use_cases_title">Usos recomendados</string>
+    <string name="ai_use_cases_body">Puedes pedir sugerencias de prioridad, dividir una meta grande en tareas, organizar los pendientes del día o detectar tareas urgentes.</string>
+
+    <string name="settings_title">Personalizar aplicación</string>
+    <string name="settings_subtitle">Elige el color principal y el tipo de letra. El calendario y el selector de hora ahora usan el mismo color del tema.</string>
+    <string name="app_color">Color de la app</string>
+    <string name="app_font">Tipo de fuente</string>
+    <string name="preview">Vista previa</string>
+    <string name="settings_preview_text">Así se verán tus notas, tareas y calendario.</string>
+</resources>

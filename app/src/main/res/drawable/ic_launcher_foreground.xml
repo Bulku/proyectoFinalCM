@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Notebook body -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M30,24 L78,24 Q82,24 82,28 L82,80 Q82,84 78,84 L30,84 Q26,84 26,80 L26,28 Q26,24 30,24 Z"/>
+    <!-- Spine -->
+    <path android:fillColor="#BBDEFB"
+        android:pathData="M26,24 L36,24 L36,84 L26,84 Z"/>
+    <!-- Lines -->
+    <path android:fillColor="#1565C0" android:pathData="M42,40 L76,40" android:strokeWidth="3" android:strokeColor="#1565C0" android:strokeLineCap="round"/>
+    <path android:fillColor="#1565C0" android:pathData="M42,52 L76,52" android:strokeWidth="3" android:strokeColor="#1565C0" android:strokeLineCap="round"/>
+    <path android:fillColor="#1565C0" android:pathData="M42,64 L66,64" android:strokeWidth="3" android:strokeColor="#1565C0" android:strokeLineCap="round"/>
+    <!-- Spiral rings -->
+    <path android:fillColor="#1565C0"
+        android:pathData="M33,30 m-4,0 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0"/>
+    <path android:fillColor="#1565C0"
+        android:pathData="M33,54 m-4,0 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0"/>
+    <path android:fillColor="#1565C0"
+        android:pathData="M33,78 m-4,0 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0"/>
+</vector>
