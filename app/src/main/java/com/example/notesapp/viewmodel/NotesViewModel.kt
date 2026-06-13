@@ -5,6 +5,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import com.example.notesapp.model.Note
 import com.example.notesapp.model.NoteColor
+import com.example.notesapp.model.NoteFolder
 import com.example.notesapp.model.Priority
 import com.example.notesapp.model.Task
 import java.time.LocalDate
@@ -14,15 +15,41 @@ class NotesViewModel : ViewModel() {
 
     // ── Notes ────────────────────────────────────────────────────────────────
     val notes = mutableStateListOf<Note>()
+    val noteFolders = mutableStateListOf<NoteFolder>()
 
-    fun addNote(title: String, content: String, color: NoteColor) {
-        if (title.isBlank() && content.isBlank()) return
-        notes.add(0, Note(title = title, content = content, color = color))
+    fun notesInFolder(folderId: Long) = notes.filter { it.folderId == folderId }
+
+    fun notesWithoutFolder() = notes.filter { it.folderId == null }
+
+    fun addNoteFolder(name: String) {
+        if (name.isBlank()) return
+        noteFolders.add(NoteFolder(name = name.trim()))
     }
 
-    fun updateNote(id: Long, title: String, content: String, color: NoteColor) {
+    fun deleteNoteFolder(id: Long) {
+        noteFolders.removeIf { it.id == id }
+        notes.indices.forEach { index ->
+            if (notes[index].folderId == id) {
+                notes[index] = notes[index].copy(folderId = null)
+            }
+        }
+    }
+
+    fun addNote(title: String, content: String, color: NoteColor, folderId: Long? = null) {
+        if (title.isBlank() && content.isBlank()) return
+        notes.add(0, Note(title = title, content = content, color = color, folderId = folderId))
+    }
+
+    fun updateNote(id: Long, title: String, content: String, color: NoteColor, folderId: Long? = null) {
         val index = notes.indexOfFirst { it.id == id }
-        if (index != -1) notes[index] = notes[index].copy(title = title, content = content, color = color)
+        if (index != -1) {
+            notes[index] = notes[index].copy(
+                title = title,
+                content = content,
+                color = color,
+                folderId = folderId
+            )
+        }
     }
 
     fun deleteNote(id: Long) {

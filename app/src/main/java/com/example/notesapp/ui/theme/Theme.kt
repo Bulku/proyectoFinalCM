@@ -5,7 +5,9 @@ import androidx.compose.material3.Typography
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.text.font.FontFamily
+import com.example.notesapp.model.NoteColor
 
 val Blue500 = Color(0xFF1976D2)
 val Blue600 = Color(0xFF1565C0)
@@ -29,6 +31,44 @@ enum class AppColorOption(
     ORANGE("Naranja", Color(0xFFE65100), Color(0xFFFFCC80), Color(0xFFFB8C00), Color(0xFFFFF7ED)),
     PINK("Rosa", Color(0xFFC2185B), Color(0xFFF8BBD0), Color(0xFFE91E63), Color(0xFFFFF1F6))
 }
+
+val noteColorOrder = listOf(
+    NoteColor.NEUTRAL,
+    NoteColor.LIGHT,
+    NoteColor.SOFT,
+    NoteColor.TINT,
+    NoteColor.WARM,
+    NoteColor.COOL
+)
+
+fun AppColorOption.noteColors(): Map<NoteColor, Color> {
+    val warmAccent = when (this) {
+        AppColorOption.BLUE -> Color(0xFFFFF6E8)
+        AppColorOption.PURPLE -> Color(0xFFFFEEF6)
+        AppColorOption.GREEN -> Color(0xFFFFF4E6)
+        AppColorOption.ORANGE -> Color(0xFFEAF4FF)
+        AppColorOption.PINK -> Color(0xFFE9FFF5)
+    }
+    val coolAccent = when (this) {
+        AppColorOption.BLUE -> Color(0xFFE9EDFF)
+        AppColorOption.PURPLE -> Color(0xFFE7F8F1)
+        AppColorOption.GREEN -> Color(0xFFE8F2FF)
+        AppColorOption.ORANGE -> Color(0xFFF1E8FF)
+        AppColorOption.PINK -> Color(0xFFEDE8FF)
+    }
+
+    return mapOf(
+        NoteColor.NEUTRAL to lerp(Color.White, background, 0.18f),
+        NoteColor.LIGHT to background,
+        NoteColor.SOFT to lerp(background, primaryContainer, 0.62f),
+        NoteColor.TINT to lerp(primaryContainer, secondary, 0.22f),
+        NoteColor.WARM to warmAccent,
+        NoteColor.COOL to coolAccent
+    )
+}
+
+fun AppColorOption.resolveNoteColor(noteColor: NoteColor): Color =
+    noteColors()[noteColor] ?: noteColors().getValue(NoteColor.NEUTRAL)
 
 enum class AppFontOption(val label: String, val fontFamily: FontFamily) {
     DEFAULT("Predeterminada", FontFamily.Default),

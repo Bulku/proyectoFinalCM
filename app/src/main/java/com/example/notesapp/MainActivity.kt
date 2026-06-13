@@ -151,7 +151,7 @@ fun MainScreen(
             color = MaterialTheme.colorScheme.background
         ) {
             when (selectedTab) {
-                0 -> NotesScreen(viewModel)
+                0 -> NotesScreen(viewModel, colorOption)
                 1 -> CalendarScreen(viewModel)
                 2 -> AiAssistantScreen(aiViewModel, viewModel)
                 3 -> SettingsScreen(

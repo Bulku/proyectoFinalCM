@@ -3,20 +3,27 @@ package com.example.notesapp.model
 import java.time.LocalDate
 import java.time.LocalTime
 
+data class NoteFolder(
+    val id: Long = System.currentTimeMillis(),
+    val name: String
+)
+
 data class Note(
     val id: Long = System.currentTimeMillis(),
     val title: String,
     val content: String,
-    val color: NoteColor = NoteColor.WHITE,
+    val color: NoteColor = NoteColor.NEUTRAL,
+    val folderId: Long? = null,
     val createdAt: LocalDate = LocalDate.now()
 )
 
-enum class NoteColor(val hex: Long) {
-    WHITE(0xFFFFFFFF),
-    YELLOW(0xFFFFF9C4),
-    BLUE(0xFFE3F2FD),
-    GREEN(0xFFE8F5E9),
-    PINK(0xFFFCE4EC)
+enum class NoteColor {
+    NEUTRAL,
+    LIGHT,
+    SOFT,
+    TINT,
+    WARM,
+    COOL
 }
 
 data class Task(

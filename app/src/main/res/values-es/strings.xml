@@ -31,6 +31,15 @@
     <string name="set_time">Establecer hora</string>
     <string name="save_task">Guardar Tarea</string>
     <string name="no_notes">Sin notas aún.\nToca + para agregar una.</string>
+    <string name="add_folder">Nueva carpeta</string>
+    <string name="folder_name">Nombre de la carpeta</string>
+    <string name="folder_name_hint">Ej: Trabajo, Personal…</string>
+    <string name="confirm_delete_folder">¿Eliminar esta carpeta? Las notas dentro se conservarán sin carpeta.</string>
+    <string name="notes_without_folder">Otras notas</string>
+    <string name="add_note_to_folder">Agregar nota a la carpeta</string>
+    <string name="note_folder">Carpeta</string>
+    <string name="no_folder">Sin carpeta</string>
+    <string name="notes_count">%1$d notas</string>
     <string name="no_tasks">Sin tareas para este día.</string>
     <string name="confirm_delete">¿Eliminar este elemento?</string>
     <string name="field_required">Este campo es obligatorio</string>
